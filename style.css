@@ -1,0 +1,175 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --main-bg: #2A2A38;
+    --secondary-bg: #F3F3F6;
+    --card-bg: #4F4E54;
+    --txt-primary: #F3F3F6;
+    --txt-secondary: #101010;
+    --icons-bg-primary: #101010;
+    --icons-bg-secondary: #F3F3F6;
+    --btn-bg-Primary: #F3F3F6;
+    --btn-bg-Secondary: #2098CA;
+
+}
+
+.container {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: var(--main-bg);
+}
+
+.In {
+    margin-top: 40px;
+    font-size: 1.6em;
+    color: var(--txt-primary);
+}
+
+.parallax {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro {
+    background-image: url('Assets/mountain-1.jpg');
+}
+
+.content {
+    background-image: url('Assets/mountain-2.jpg');
+}
+
+.footer {
+    background-image: url('Assets/mountain-3.jpg');
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title2 {
+    font-size: 6em;
+    font-weight: 1000;
+    letter-spacing: 20px;
+    color: var(--txt-secondary);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 40%;
+    border: 1px solid var(--icons-bg-primary);
+    background-color: var(--card-bg);
+    color: var(--txt-primary);
+    padding: 32px;
+    margin: 8px;
+    margin-top: 40px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.UD {
+    margin-top: 8em;
+    padding: 20px;
+    align-items: center;
+    color: var(--icons-bg-secondary);
+    animation: underDev 2s infinite;
+}
+
+.icons {
+    font-size: 64px;
+    color: var(--icons-bg-primary);
+}
+
+.title  {
+    margin-top:10px;
+    font-size: 2em;
+}
+
+.description {
+    margin-top: 4px;
+    font-size: 1em;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 6px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    border-radius: 30px;
+    background-color: var(--btn-bg-Primary);
+}
+
+.btn:hover {
+    background-color: var(--btn-bg-Secondary);
+    color: var(--txt-secondary);
+    transition: s ease-in-out;
+}
+
+@keyframes Disco {
+    0% {
+        font-size: 1em;
+    }
+    50% {
+        font-size: 1.25em;
+    }
+    100% {
+        font-size:  1em;
+    }
+}
+
+@keyframes underDev {
+    0% {
+        font-size: 3em;
+    }
+    50% {
+        font-size: 3.25em;
+    }
+    100% {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .card {
+        width: 95%;
+    }
+
+    .title {
+        font-size: 3em;
+    }
+
+    .description {
+        font-size: 2em;
+    }
+    .btn {
+        padding: 16px;
+        font-size: 2em;
+    }
+}
