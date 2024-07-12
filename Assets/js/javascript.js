@@ -27,5 +27,5 @@ function redirEmail() {
 }
 
 function redirProfile() {
-    window.location.href = "profile.html";
+    window.location.href = "Assets/profile.html";
 }
