@@ -8,21 +8,26 @@ body {
 }
 
 :root {
-    --main-bg: linear-gradient(135deg, #2A2A38, #1F1F2F);
-    --secondary-bg: #F3F3F6;
-    --card-bg: linear-gradient(135deg, #4F4E54, #2A2A38);
-    --txt-primary: #F3F3F6;
+    --main-bg: linear-gradient(135deg, #1d1d27, #1a1a22);
+    --secondary-bg: #f3f3f6;
+    --card-bg: linear-gradient(135deg, #444, #333);
+    --txt-primary: #f3f3f6;
     --txt-secondary: #101010;
     --icons-bg-primary: #101010;
-    --icons-bg-secondary: #F3F3F6;
-    --btn-bg-Primary: #F3F3F6;
-    --btn-bg-Secondary: #2098CA;
+    --icons-bg-secondary: #f3f3f6;
+    --btn-bg-primary: #2098ca;
+    --btn-bg-secondary: #f3f3f6;
+    --btn-hover-bg: #1a1a22;
+    --btn-hover-txt: #f3f3f6;
+    --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --box-shadow-hover: 0 16px 32px rgba(0, 0, 0, 0.3);
 }
 
 body {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 100vh;
+    background-color: #121212;
 }
 
 .background {
@@ -33,22 +38,23 @@ body {
     height: 100%;
     background: var(--main-bg);
     z-index: -1;
+    overflow: hidden;
 }
 
 .background::before,
 .background::after {
     content: '';
     position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    background: radial-gradient(circle, #4F4E54, transparent);
-    animation: rotate 30s linear infinite;
+    width: 300%;
+    height: 300%;
+    top: -100%;
+    left: -100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 70%);
+    animation: animateBackground 60s linear infinite;
 }
 
 .background::after {
-    animation-delay: -15s;
+    animation-delay: -10s;
 }
 
 .container {
@@ -58,6 +64,7 @@ body {
     align-items: center;
     width: 100%;
     padding: 20px;
+    z-index: 1;
 }
 
 .wrapper {
@@ -75,12 +82,12 @@ body {
 }
 
 .In {
-    font-size: 1.6em;
+    font-size: 2em;
     color: var(--txt-primary);
     text-align: center;
     padding: 10px;
     max-width: 800px;
-    animation: float 3s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite, fadeIn 1s ease-out;
 }
 
 .card {
@@ -91,7 +98,7 @@ body {
     padding: 32px;
     margin: 10px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 300px;
     text-align: center;
@@ -99,7 +106,7 @@ body {
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .text-center {
@@ -137,18 +144,38 @@ body {
 
 .btn {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 12px 24px;
     cursor: pointer;
     border: none;
     border-radius: 30px;
-    background-color: var(--btn-bg-Primary);
+    background-color: var(--btn-bg-primary);
     color: var(--txt-secondary);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: var(--box-shadow);
 }
 
 .btn:hover {
-    background-color: var(--btn-bg-Secondary);
-    color: var(--txt-primary);
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-txt);
+    transform: translateY(-3px);
+}
+
+@keyframes animateBackground {
+    0% {
+        transform: translate(-25%, -25%);
+    }
+    100% {
+        transform: translate(25%, 25%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes rotate {
@@ -189,8 +216,8 @@ body {
     }
 
     .btn {
-        padding: 8px 16px;
-        font-size: 0.9em;
+        padding: 10px 20px;
+        font-size: 1em;
     }
 }
 
@@ -208,7 +235,7 @@ body {
     }
 
     .btn {
-        padding: 6px 12px;
-        font-size: 0.8em;
+        padding: 8px 16px;
+        font-size: 0.9em;
     }
 }
