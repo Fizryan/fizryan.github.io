@@ -26,6 +26,10 @@ function redirEmail() {
     window.location.href = "mailto:hafizryandin@outlook.com";
 }
 
+function redirWebsite() {
+    window.location.href = "Assets/redrabbit.html";
+}
+
 function redirProfile() {
     window.location.href = "Assets/profile.html";
 }
