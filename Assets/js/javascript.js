@@ -26,10 +26,14 @@ function redirEmail() {
     window.location.href = "mailto:hafizryandin@outlook.com";
 }
 
+function redirPortfolio() {
+    window.location.href = "https://fizryan.github.io/Assets/e-portfolio.html";
+}
+
 function redirWebsite() {
-    window.location.href = "Assets/redrabbit.html";
+    window.location.href = "https://fizryan.github.io/Assets/redrabbit.html";
 }
 
 function redirProfile() {
-    window.location.href = "Assets/profile.html";
+    window.location.href = "https://fizryan.github.io/Assets/profile.html";
 }
