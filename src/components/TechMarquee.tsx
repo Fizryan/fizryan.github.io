@@ -18,27 +18,47 @@ const icons = [
 ];
 
 export const TechMarquee = () => {
+  const duplicatedIcons = [...icons, ...icons, ...icons, ...icons];
+
   return (
     <section className="overflow-hidden py-16 bg-transparent">
       <div className="relative">
         <motion.div
           animate={{ x: ['0%', '-100%'] }}
-          transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
-          className="flex gap-12 text-5xl md:text-6xl text-cyan-400/80 whitespace-nowrap w-max"
+          transition={{ 
+            repeat: Infinity, 
+            duration: 40, 
+            ease: 'linear',
+            repeatType: 'loop'
+          }}
+          className="flex gap-8 text-5xl md:text-6xl text-cyan-400/80 whitespace-nowrap w-max"
         >
-          {[...icons, ...icons].flatMap((Icon, idx) => [
+          {duplicatedIcons.flatMap((Icon, idx) => [
             <motion.div
-              key={idx}
-              whileHover={{ scale: 1.25, rotate: 10 }}
-              transition={{ type: 'spring', stiffness: 200 }}
-              className="cursor-pointer drop-shadow-[0_0_6px_rgba(34,211,238,0.5)]"
+              key={`icon-${idx}`}
+              whileHover={{ 
+                scale: 1.25, 
+                rotate: 10,
+                transition: { 
+                  type: 'spring', 
+                  stiffness: 300,
+                  damping: 10 
+                }
+              }}
+              className="cursor-pointer drop-shadow-[0_0_8px_rgba(34,211,238,0.3)] hover:drop-shadow-[0_0_12px_rgba(34,211,238,0.6)] transition-all"
             >
               <Icon />
             </motion.div>,
-            <div
+            <motion.div
               key={`dot-${idx}`}
               className="w-2 h-2 bg-cyan-400 rounded-full self-center opacity-50"
-            />,
+              animate={{ scale: [0.8, 1.2, 0.8] }}
+              transition={{ 
+                duration: 2, 
+                repeat: Infinity,
+                delay: idx * 0.1 
+              }}
+            />
           ])}
         </motion.div>
       </div>

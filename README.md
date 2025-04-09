@@ -1,6 +1,6 @@
 # 🌐 Fizryan | Portfolio
 
-Welcome to my **personal portfolio website** — a fully responsive, animated, and elegant showcase of my skills, projects, and coding style. Built using modern technologies like **React**, **Tailwind CSS**, and **Framer Motion**, this portfolio represents not just who I am, but also _how_ I build.
+Welcome to my **personal portfolio website** — a fully responsive, animated, and elegant showcase of my skills, projects, and coding style. Built using modern technologies like **React**, **Tailwind CSS**, and **Framer Motion**
 
 ---
 
@@ -14,7 +14,6 @@ Welcome to my **personal portfolio website** — a fully responsive, animated, a
 🎨 **Modern UI Design**  
 - Clean, dark-themed aesthetic using Tailwind CSS  
 - Floating particle animations and section transitions  
-- Windows 11-inspired boot intro *(if enabled)*
 
 💡 **About Me Section**  
 - Personalized and focused description of who I am  

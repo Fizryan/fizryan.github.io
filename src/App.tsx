@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { AnimatedBackground } from './components/AnimatedBackground';
-import { FloatingParticles } from './components/FloatingParticles';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
 import { JourneyTimeline } from './components/JourneyTimeline';
@@ -22,7 +21,6 @@ const App = () => {
       <motion.div style={{ scale }}>
         <AnimatedBackground />
       </motion.div>
-      <FloatingParticles />
       <HeroSection />
       <CodeShowcase />
       <AboutSection />
