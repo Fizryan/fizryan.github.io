@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+# 🌐 Fizryan | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my **personal portfolio website** — a fully responsive, animated, and elegant showcase of my skills, projects, and coding style. Built using modern technologies like **React**, **Tailwind CSS**, and **Framer Motion**, this portfolio represents not just who I am, but also _how_ I build.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+✨ **Animated Code Showcase**  
+- Interactive typing effect for multiple programming languages  
+- Syntax highlighting with line numbers  
+- Auto-switching code snippets with copy functionality  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🎨 **Modern UI Design**  
+- Clean, dark-themed aesthetic using Tailwind CSS  
+- Floating particle animations and section transitions  
+- Windows 11-inspired boot intro *(if enabled)*
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+💡 **About Me Section**  
+- Personalized and focused description of who I am  
+- Minimal and modern layout with icon highlights  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+📱 **Responsive Design**  
+- Fully optimized for desktop, tablet, and mobile devices  
+- Smooth animations using Framer Motion
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🛠️ Tech Stack
+
+- **React.js** ⚛️ – Component-based UI  
+- **Tailwind CSS** 💨 – Utility-first CSS styling  
+- **Framer Motion** 🎞️ – Animations and transitions  
+- **React Icons** 🎨 – Icon library
+
+---
+
+## 📸 Screenshots
+
+> _Coming soon!_  
+---
+
+## 🙋‍♂️ About the Author
+
+Hi! I'm **Fizryan**, a passionate software engineering student who loves creating meaningful software.  
+I specialize in building efficient, secure, and aesthetic applications — from full-stack web projects to game hacks and simulations.
+
+📫 Feel free to connect with me on:
+- GitHub: [@fizryan](https://github.com/fizryan)
+- Instagram: [@_fizryan](https://instagram.com/_fizryan)
+---
+
+## 📜 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+> Built  by Fizryan
